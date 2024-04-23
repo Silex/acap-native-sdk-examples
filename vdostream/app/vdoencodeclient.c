@@ -201,8 +201,11 @@ int main(int argc, char* argv[]) {
     if (!stream)
         goto exit;
 
+    syslog(LOG_INFO, "Stream created");
+
     if (!vdo_stream_attach(stream, NULL, &error))
         goto exit;
+    syslog(LOG_INFO, "Stream attached");
 
     VdoMap* info = vdo_stream_get_info(stream, &error);
     if (!info)
@@ -220,6 +223,8 @@ int main(int argc, char* argv[]) {
     // Start the stream
     if (!vdo_stream_start(stream, &error))
         goto exit;
+
+    syslog(LOG_INFO, "Stream started");
 
     // Loop until interrupt by Ctrl-C or reaching G_MAXUINT
     for (guint n = 0; n < frames; ++n) {
