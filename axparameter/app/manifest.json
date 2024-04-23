@@ -2,8 +2,8 @@
     "schemaVersion": "1.6.0",
     "acapPackageConf": {
         "setup": {
-            "friendlyName": "axparameter",
-            "appName": "axparameter",
+            "friendlyName": "ax_parameter",
+            "appName": "ax_parameter",
             "vendor": "Axis Communications",
             "embeddedSdkVersion": "3.0",
             "vendorUrl": "https://www.axis.com",
@@ -21,6 +21,11 @@
                     "name": "BackupValue",
                     "default": "restored from backup",
                     "type": "hidden:string"
+                },
+                {
+                    "name": "Frequency",
+                    "default": "60",
+                    "type": "int:min=0"
                 }
             ]
         }

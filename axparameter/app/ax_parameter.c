@@ -25,7 +25,7 @@
 #include <stdbool.h>
 #include <syslog.h>
 
-#define APP_NAME "axparameter"
+#define APP_NAME "ax_parameter"
 
 // Structure used for passing data to the monitor_parameters() callback.
 struct message {

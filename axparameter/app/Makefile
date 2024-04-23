@@ -1,5 +1,5 @@
-PROGS     = axparameter
-SRCS      = axparameter.c
+PROGS     = ax_parameter
+SRCS      = ax_parameter.c
 OBJS      = $(SRCS:.c=.o)
 
 PKGS = glib-2.0 gio-2.0 axparameter
